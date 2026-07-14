@@ -54,7 +54,37 @@
       <option value="windows">Windows</option>
     </select>
   </div>\
-  
+    <!-- Radio Buttons Group -->
+  <div>
+    <p>Do you work fully remote?</p>
+    <label>
+      <input type="radio" name="work-mode" value="yes"> Yes
+    </label>
+    <label>
+      <input type="radio" name="work-mode" value="no"> No
+    </label>
+  </div>
+
+  <!-- Checkboxes Group -->
+  <div>
+    <p>Which peripherals do you use? (Select all that apply)</p>
+    <label>
+      <input type="checkbox" value="mechanical-keyboard"> Mechanical Keyboard
+    </label>
+    <label>
+      <input type="checkbox" value="ergonomic-mouse"> Ergonomic Mouse
+    </label>
+  </div>
+
+  <!-- Textarea Comments -->
+  <div>
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" placeholder="Enter your comments here..."></textarea>
+  </div>
+
+  <!-- Submit Button -->
+  <button id="submit" type="submit">Submit</button>
+
 </form>
   </body>
 </html>
