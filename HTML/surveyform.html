@@ -2,8 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+     <meta view="viewport"content="width=device-width,scale=1.0"/>
     <title>Survey Form</title>
   </head>
+<body>
+  <h1 id="title">Developer Setup Survey</h1>
+<p id="description">Tell us about your workstation configuration and coding environment.</p>
 
-  <body></body>
+<form id="survey-form">
+  
+  <!-- Name Input Field -->
+  <div>
+    <label id="name-label" for="name">Full Name:</label>
+    <input 
+      id="name" 
+      type="text" 
+      placeholder="Enter your name" 
+      required
+    >
+  </div>
+
+  <!-- Email Input Field -->
+  <div>
+    <label id="email-label" for="email">Email Address:</label>
+    <input 
+      id="email" 
+      type="email" 
+      placeholder="name@example.com" 
+      required
+    >
+  </div>
+
+  <!-- Number Input Field -->
+  <div>
+    <label id="number-label" for="number">Number of Monitors (1-5):</label>
+    <input 
+      id="number" 
+      type="number" 
+      min="1" 
+      max="5" 
+      placeholder="e.g. 2"
+    >
+  </div>
+
+  <!-- Dropdown Selection Field -->
+  <div>
+    <label for="dropdown">Primary Operating System:</label>
+    <select id="dropdown">
+      <option value="macos">macOS</option>
+      <option value="linux">Linux</option>
+      <option value="windows">Windows</option>
+    </select>
+  </div>\
+  
+</form>
+  </body>
 </html>
