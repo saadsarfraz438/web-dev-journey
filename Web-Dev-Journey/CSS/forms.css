@@ -1,0 +1,173 @@
+/* 1. Global Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fa;
+  color: #333333;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* 2. Header Section */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #1a252f;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+header p {
+  color: #5a6b7c;
+  font-size: 1rem;
+}
+
+/* 3. Form and Layout Containers */
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+legend {
+  font-weight: bold;
+  color: #2c3e50;
+  padding: 0 8px;
+  font-size: 0.95rem;
+}
+
+/* 4. Text Inputs, Number, and Dropdowns */
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  color: #4a5568;
+}
+
+/* Override display rule for labels that directly follow radio/checkbox inputs */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  padding-left: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+/* Specific styling for the first label in fieldsets to prevent extra top gap */
+fieldset label:first-of-type {
+  margin-top: 4px;
+}
+
+/* 5. Radio Buttons and Checkboxes Alignment */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  accent-color: #3182ce; /* Modern browser toggle color choice */
+}
+
+/* Break lines cleanly for successive radio/checkbox choices */
+fieldset input[type="radio"] ~ input[type="radio"],
+fieldset input[type="checkbox"] ~ input[type="checkbox"] {
+  margin-left: 0;
+  display: inline-block;
+}
+
+/* Line-break utility for inline selections */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  margin-right: 20px; /* Spaces them out if inline */
+}
+
+/* Make checkbox items list vertically for better readability */
+input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+input[type="checkbox"] + label {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 30px);
+  margin-bottom: 8px;
+}
+
+/* 6. Textarea Component */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  margin-bottom: 24px;
+}
+
+/* 7. Submit Button */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: #3182ce;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #2b6cb0;
+}
+
+button[type="submit"]:active {
+  background-color: #2c5282;
+}
