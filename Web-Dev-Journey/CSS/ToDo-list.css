@@ -1,0 +1,115 @@
+/* 1. Global Reset & Body Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9; /* Soft, clean slate background */
+  color: #334155;
+  line-height: 1.5;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. Main Title Layout */
+h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+/* 3. Core Todo List Structure */
+.todo-list {
+  list-style: none; /* Strip out ugly raw bullet points */
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Spaces out the 4 main todo items */
+.todo-list > li {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.todo-list > li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* 4. Inputs and Primary Labels */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #2563eb; /* Modern choice tint for clicked checks */
+  vertical-align: middle;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-left: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* Strike-through effect when item is checked */
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* 5. Sub-Item Unordered List Setup */
+.sub-item {
+  list-style: none;
+  margin-top: 8px;
+  padding-left: 26px; /* Offsets links to sit perfectly underneath labels */
+}
+
+/* 6. Link Decoration and Interaction States */
+.sub-item-link {
+  text-decoration: none; /* No default underline decoration */
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+/* Unvisited State */
+.sub-item-link:link {
+  color: #2563eb; /* Clean digital blue */
+}
+
+/* Visited State */
+.sub-item-link:visited {
+  color: #7c3aed; /* Royal purple */
+}
+
+/* Hovered Over State */
+.sub-item-link:hover {
+  color: #1d4ed8; /* Darker focused blue */
+  text-decoration: underline; /* Add underline back selectively on mouse hover */
+}
+
+/* Keyboard Focus State */
+.sub-item-link:focus {
+  outline: 2px dashed #f97316; /* Bright orange border indicator */
+  outline-offset: 4px;
+}
+
+/* Clicked/Active State */
+.sub-item-link:active {
+  color: #dc2626; /* Crimson alert red */
+}
