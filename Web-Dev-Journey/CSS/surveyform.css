@@ -1,4 +1,4 @@
-/* 1. Global Reset & Typography */
+/* 1. Global Reset & Developer Core Theme */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,89 +7,145 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: #0f172a; /* Sleek dark slate developer background */
+  color: #f8fafc;
+  line-height: 1.6;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* 2. Heading Layout */
-h1 {
-  font-size: 2rem;
-  color: #0f172a;
-  margin-bottom: 24px;
+/* 2. Typography Header */
+#title {
+  font-size: 2.25rem;
+  color: #38bdf8; /* Vibrant terminal cyan accent */
+  margin-bottom: 8px;
   text-align: center;
 }
 
-/* 3. Table Wrapper for Mobile Responsiveness */
-/* Wrap your <table> in a <div> with this class if you want horizontal scrolling on mobile */
-.table-container {
+#description {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* 3. Form and Layout Elements */
+#survey-form {
+  background-color: #1e293b; /* Slightly lighter container box */
   width: 100%;
-  max-width: 900px;
-  overflow-x: auto;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  max-width: 640px;
+  padding: 32px;
   border-radius: 8px;
-  background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
+/* Grouping form spacing dividers */
+#survey-form > div {
+  margin-bottom: 24px;
+}
+
+/* 4. Labels and Paragraph Texts */
+label, 
+#survey-form p {
+  display: block;
   font-size: 0.95rem;
-}
-
-caption {
-  font-size: 1rem;
   font-weight: 600;
-  color: #64748b;
-  padding: 16px;
-  background-color: #ffffff;
-  text-align: left;
-  border-bottom: 1px solid #e2e8f0;
+  color: #cbd5e1;
+  margin-bottom: 8px;
 }
 
-/* 4. Headers and Row Headers */
-th, td {
-  padding: 14px 18px;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-thead th {
+/* Standardizing full-width fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
   background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #f8fafc;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Placeholder font styling */
+input::placeholder,
+textarea::placeholder {
+  color: #64748b;
+}
+
+/* Input Focus States */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* 5. Radio and Checkbox Field Configuration */
+#survey-form div label:has(input[type="radio"]),
+#survey-form div label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #0f172a;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  transition: background-color 0.2s;
+}
+
+/* Highlight background row selection on hover */
+#survey-form div label:has(input[type="radio"]):hover,
+#survey-form div label:has(input[type="checkbox"]):hover {
+  background-color: #1e293b;
+}
+
+/* Space out native bubble options from text descriptions */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 12px;
+  width: 16px;
+  height: 16px;
+  accent-color: #38bdf8; /* Colors the active bubble cyan */
+  cursor: pointer;
+}
+
+/* 6. Textarea Sizing */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+/* 7. Action Button */
+#submit {
+  display: block;
+  width: 100%;
+  background-color: #0ea5e9;
   color: #ffffff;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-}
-
-/* Time column column/row header styling */
-tbody th[scope="row"] {
-  background-color: #f1f5f9;
-  color: #475569;
-  font-weight: 600;
-  white-space: nowrap;
-  width: 120px;
-}
-
-/* 5. Alternating Row Backgrounds (Zebra Striping) */
-tbody tr:nth-child(even) {
-  background-color: #f8fafc;
-}
-
-/* Hover effect on schedule rows */
-tbody tr:hover {
-  background-color: #f0fdf4; /* Light green tint to show focus */
-}
-
-/* 6. Special Row Customization (Breaks & Lunch) */
-td[colspan="3"] {
-  text-align: center;
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #059669;
-  background-color: #ecfdf5; /* Soft green theme for breaks */
-  letter-spacing: 0.05em;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#submit:hover {
+  background-color: #38bdf8;
+}
+
+#submit:active {
+  transform: scale(0.98);
 }
