@@ -1,0 +1,95 @@
+/* 1. Global Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. Heading Layout */
+h1 {
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* 3. Table Wrapper for Mobile Responsiveness */
+/* Wrap your <table> in a <div> with this class if you want horizontal scrolling on mobile */
+.table-container {
+  width: 100%;
+  max-width: 900px;
+  overflow-x: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+caption {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+  padding: 16px;
+  background-color: #ffffff;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* 4. Headers and Row Headers */
+th, td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+thead th {
+  background-color: #0f172a;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+/* Time column column/row header styling */
+tbody th[scope="row"] {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-weight: 600;
+  white-space: nowrap;
+  width: 120px;
+}
+
+/* 5. Alternating Row Backgrounds (Zebra Striping) */
+tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* Hover effect on schedule rows */
+tbody tr:hover {
+  background-color: #f0fdf4; /* Light green tint to show focus */
+}
+
+/* 6. Special Row Customization (Breaks & Lunch) */
+td[colspan="3"] {
+  text-align: center;
+  font-weight: bold;
+  color: #059669;
+  background-color: #ecfdf5; /* Soft green theme for breaks */
+  letter-spacing: 0.05em;
+}
