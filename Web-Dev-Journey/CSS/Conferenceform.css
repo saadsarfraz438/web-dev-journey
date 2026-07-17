@@ -1,0 +1,136 @@
+body {
+  background-color: MidnightBlue;
+  color: whitesmoke;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  background-color: #ffffff1a;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);  
+  backdrop-filter: blur(5px);
+}
+
+.center {
+  text-align: center;
+}
+
+.description {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  margin: 25px 0;
+  padding: 20px;
+}
+
+fieldset legend {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0 10px;
+  color: #a0c4ff;
+}
+
+label {
+  font-size: 1.1rem;
+}
+
+label:not(.contact-method) {
+  display: block;
+  margin: 15px 0 5px 0;
+}
+
+input:not(.contact-method-radio-btn),
+textarea {
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:not(.contact-method-radio-btn):focus,
+textarea:focus {
+  outline: none;
+  border-color: royalblue;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(65, 105, 225, 0.5);
+}
+
+input,
+input::placeholder,
+textarea {
+  color: whitesmoke;
+}
+
+.contact-method-radio-btn {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  vertical-align: bottom;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.contact-method-radio-btn:hover {
+  border-color: lightgreen;
+}
+
+.contact-method-radio-btn::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(3px, 3px) scale(0);
+  transition: all 0.3s ease-in;
+}
+
+.contact-method-radio-btn:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  background-color: lightgreen;
+}
+
+.contact-method-radio-btn:checked {
+  border-color: lightgreen;
+}
+
+.submit-btn {
+  cursor: pointer;
+  background-color: royalblue;
+  color: whitesmoke;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+  margin: 30px auto 10px auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+}
+
+.submit-btn:hover {
+  background-color: #2b52cd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(65, 105, 225, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
