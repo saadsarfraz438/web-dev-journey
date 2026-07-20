@@ -4,7 +4,91 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colored Markers</title>
+    <link rel="stylesheet" href="../css/Colorsets.css">
   </head>
   <body>
+    <header>
+        <h1>Curated Color Palettes</h1>
+        <p>Click any color code to copy it to your clipboard.</p>
+    </header>
+
+    <main class="palette-container">
+        <!-- Palette 1: Oceanic Breeze -->
+        <section class="palette-card">
+            <h2>Oceanic Breeze</h2>
+            <div class="color-swatch-list">
+                <div class="swatch" style="--bg-color: #0d1b2a;">
+                    <span class="color-hex">#0D1B2A</span>
+                </div>
+                <div class="swatch" style="--bg-color: #1b263b;">
+                    <span class="color-hex">#1B263B</span>
+                </div>
+                <div class="swatch" style="--bg-color: #415a77;">
+                    <span class="color-hex">#415A77</span>
+                </div>
+                <div class="swatch" style="--bg-color: #778da9;">
+                    <span class="color-hex">#778DA9</span>
+                </div>
+                <div class="swatch" style="--bg-color: #e0e1dd;">
+                    <span class="color-hex">#E0E1DD</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Palette 2: Sunset Glow -->
+        <section class="palette-card">
+            <h2>Sunset Glow</h2>
+            <div class="color-swatch-list">
+                <div class="swatch" style="--bg-color: #f72585;">
+                    <span class="color-hex">#F72585</span>
+                </div>
+                <div class="swatch" style="--bg-color: #7209b7;">
+                    <span class="color-hex">#7209B7</span>
+                </div>
+                <div class="swatch" style="--bg-color: #3f37c9;">
+                    <span class="color-hex">#3F37C9</span>
+                </div>
+                <div class="swatch" style="--bg-color: #4361ee;">
+                    <span class="color-hex">#4361EE</span>
+                </div>
+                <div class="swatch" style="--bg-color: #4cc9f0;">
+                    <span class="color-hex">#4CC9F0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Palette 3: Forest Moss -->
+        <section class="palette-card">
+            <h2>Forest Moss</h2>
+            <div class="color-swatch-list">
+                <div class="swatch" style="--bg-color: #2d6a4f;">
+                    <span class="color-hex">#2D6A4F</span>
+                </div>
+                <div class="swatch" style="--bg-color: #40916c;">
+                    <span class="color-hex">#40916C</span>
+                </div>
+                <div class="swatch" style="--bg-color: #52b788;">
+                    <span class="color-hex">#52B788</span>
+                </div>
+                <div class="swatch" style="--bg-color: #74c69d;">
+                    <span class="color-hex">#74C69D</span>
+                </div>
+                <div class="swatch" style="--bg-color: #b7e4c7;">
+                    <span class="color-hex">#B7E4C7</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Optional: Simple click-to-copy functionality
+        document.querySelectorAll('.swatch').forEach(swatch => {
+            swatch.addEventListener('click', () => {
+                const hexText = swatch.querySelector('.color-hex').innerText;
+                navigator.clipboard.writeText(hexText);
+                alert(`Copied ${hexText} to clipboard!`);
+            });
+        });
+    </script>
   </body>
 </html>
