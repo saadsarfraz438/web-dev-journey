@@ -1,0 +1,43 @@
+button {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+}
+
+h1{
+    color: blue;
+    text-align: center;
+}
+button:hover {
+    background: blue;
+}
+
+button:active {
+    background: red;
+}
+
+input:focus {
+    border: 2px solid blue;
+    outline: none;
+}
+
+li:first-child {
+    color: red;
+}
+
+li:last-child {
+    color: green;
+}
+
+h1::before {
+    content: "🔥 ";
+}
+
+h1::after {
+    content: " 🚀";
+}
+
+p::first-letter {
+    font-size: 40px;
+    color: red;
+}
